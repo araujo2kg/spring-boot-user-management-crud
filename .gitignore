@@ -1,5 +1,6 @@
 # Compiled class file
 *.class
+/target/
 
 # Log file
 *.log
@@ -22,3 +23,32 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+*.hprof
+*.jfr
+
+# Local IDE metadata
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+.factorypath
+/.vscode/settings.json
+
+# Operating-system metadata
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Credentials and machine-specific runtime configuration
+.env
+.env.*
+!.env.example
+!.env.*.example
+/config/application-local.properties
+/config/application-local.yml
+/config/application-local.yaml
+
+# Generated embedded-database files
+*.mv.db
+*.trace.db
