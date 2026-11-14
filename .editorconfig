@@ -16,6 +16,9 @@ max_line_length = 120
 [*.{xml,sql}]
 indent_size = 4
 
+[src/main/resources/db/migration/V1__create_users.sql]
+indent_size = 2
+
 [*.{ps1,psm1,psd1}]
 indent_size = 4
 
