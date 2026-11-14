@@ -3,13 +3,16 @@ server:
     port: 8080
 
 spring:
+    config:
+        import: optional:file:.env[.properties]
+
     application:
         name: user-management
 
     datasource:
-        url: jdbc:mysql://127.0.0.1:3306/user_management
-        username: user_management
-        password: ${SPRING_DATASOURCE_PASSWORD}
+        url: jdbc:mysql://127.0.0.1:${MYSQL_PORT:3306}/${MYSQL_DATABASE:user_management}
+        username: ${MYSQL_USER:user_management}
+        password: ${MYSQL_PASSWORD}
         hikari:
             connection-timeout: 10000
 
